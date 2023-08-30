@@ -32,7 +32,40 @@ Docker is a set of platform-as-a-service products that use OS-level virtualizati
 
 Docker Image
 The actual package, the artifact that can be moved around
+Image example: postgres, mongodb
 
 Docker Container
+A running environment for IMAGE
 Container environment is created when you actually start the application
+
+Operating System Layers
+OS Kernal → communicated with hardware
+Applications → run on the Kernal layer
+
+Docker vs. Virtual Machine(VM)
+Docker virtualizes the application layer and then uses the operation system of the host
+Docker images are smaller → only have to implement 1 layer
+Docker containers start and run much faster
+Virtual Machine has its own application layer and kernel 
+VM of an Operating System can run on any Operating Systems host
+
+Docker Installation
+https://www.docker.com/get-started/
+
+Basic Commands
+Docker pull → used to download image
+Docker run → creates a container for the image you want to run
+Docker start → starts the container
+Docker Stop → stops the container
+Docker ps → lists all the containers that are running 
+Docker ps -a → lists all the containers that are running and not running
+
+Container Port vs. Host Port
+Multiple containers can run on your host machine
+Your laptop has one certain port available
+Conflict when the same port on the host machine
+
+Port binding
+How to connect host port to the container port
+Docker run -p[host port]:[container port]
 
